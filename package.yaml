@@ -43,9 +43,29 @@ library:
   source-dirs: src
 
 executables:
-  distprog-exe:
+  hello-exe:
     main:                Main.hs
-    source-dirs:         app
+    source-dirs:         app/helloworld
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - distprog
+
+  twoproc-exe:
+    main:                Main.hs
+    source-dirs:         app/twoprocesses
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - distprog
+
+  remoteproc-exe:
+    main:                Main.hs
+    source-dirs:         app/spawnremoteprocess
     ghc-options:
     - -threaded
     - -rtsopts

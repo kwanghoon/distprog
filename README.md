@@ -2,7 +2,13 @@
 
 ### A play with Distributed Haskell (aka Cloud Haskell)
 
-- http://haskell-distributed.github.io/tutorials/1ch.html
+- Creating a node (app/helloworld: hello-exe)
+- Sending messages (app/spawnremoteprocess: twoproc-exe)
+- Spawning remote processes (app/twoprocesses: remoteproc-exe)
+
+- cf. http://haskell-distributed.github.io/tutorials/1ch.html
+
+
 
 
 

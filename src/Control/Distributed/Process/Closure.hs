@@ -1,4 +1,4 @@
-{-# LANGUAGE CPP #-}
+{-# LANGUAGE TemplateHaskell, CPP #-}
 -- | /Towards Haskell in the Cloud/ (Epstein et al., Haskell Symposium 2011)
 -- proposes a new type construct called 'static' that characterizes values that
 -- are known statically. Cloud Haskell uses the
@@ -186,7 +186,7 @@ module Control.Distributed.Process.Closure
   , mkClosureValSingle
   , mkClosureVal
   , call'
-#ifdef TemplateHaskellSupport
+-- #ifdef TemplateHaskellSupport
     -- * Template Haskell support for creating static values and closures
   , remotable
   , remotableDecl
@@ -195,7 +195,7 @@ module Control.Distributed.Process.Closure
   , mkStaticClosure
   , functionSDict
   , functionTDict
-#endif
+-- #endif
   ) where
 
 import Control.Distributed.Process.Serializable (SerializableDict(..))
@@ -231,7 +231,7 @@ import Control.Distributed.Process.Internal.Closure.Explicit
   , mkClosureVal
   , call'
   )
-#ifdef TemplateHaskellSupport
+-- #ifdef TemplateHaskellSupport
 import Control.Distributed.Process.Internal.Closure.TH
   ( remotable
   , remotableDecl
@@ -241,4 +241,4 @@ import Control.Distributed.Process.Internal.Closure.TH
   , mkClosure
   , mkStaticClosure
   )
-#endif
+-- #endif

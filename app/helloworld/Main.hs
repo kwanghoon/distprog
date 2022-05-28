@@ -1,3 +1,6 @@
+
+-- | Creating a node
+
 module Main where
 
 import Network.Transport.TCP (createTransport, defaultTCPAddr, defaultTCPParameters)
