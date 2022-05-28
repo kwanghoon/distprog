@@ -1,0 +1,137 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.34.4.
+--
+-- see: https://github.com/sol/hpack
+
+name:           distprog
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/githubuser/distprog#readme>
+homepage:       https://github.com/githubuser/distprog#readme
+bug-reports:    https://github.com/githubuser/distprog/issues
+author:         Author name here
+maintainer:     example@example.com
+copyright:      2022 Author name here
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/githubuser/distprog
+
+library
+  exposed-modules:
+      Control.Distributed.Process
+      Control.Distributed.Process.Closure
+      Control.Distributed.Process.Debug
+      Control.Distributed.Process.Internal.BiMultiMap
+      Control.Distributed.Process.Internal.Closure.BuiltIn
+      Control.Distributed.Process.Internal.Closure.Explicit
+      Control.Distributed.Process.Internal.Closure.TH
+      Control.Distributed.Process.Internal.CQueue
+      Control.Distributed.Process.Internal.Messaging
+      Control.Distributed.Process.Internal.Primitives
+      Control.Distributed.Process.Internal.Spawn
+      Control.Distributed.Process.Internal.StrictContainerAccessors
+      Control.Distributed.Process.Internal.StrictList
+      Control.Distributed.Process.Internal.StrictMVar
+      Control.Distributed.Process.Internal.Types
+      Control.Distributed.Process.Internal.WeakTQueue
+      Control.Distributed.Process.Management
+      Control.Distributed.Process.Management.Internal.Agent
+      Control.Distributed.Process.Management.Internal.Bus
+      Control.Distributed.Process.Management.Internal.Trace.Primitives
+      Control.Distributed.Process.Management.Internal.Trace.Remote
+      Control.Distributed.Process.Management.Internal.Trace.Tracer
+      Control.Distributed.Process.Management.Internal.Trace.Types
+      Control.Distributed.Process.Management.Internal.Types
+      Control.Distributed.Process.Node
+      Control.Distributed.Process.Serializable
+      Control.Distributed.Process.UnsafePrimitives
+  other-modules:
+      Paths_distprog
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+    , binary
+    , bytestring
+    , containers
+    , data-accessor
+    , deepseq
+    , distributed-static
+    , exceptions
+    , hashable
+    , mtl
+    , network-transport
+    , network-transport-tcp
+    , random
+    , rank1dynamic
+    , stm
+    , syb
+    , template-haskell >=2.11.0.0 && <=2.11.0.0
+    , time
+  default-language: Haskell2010
+
+executable distprog-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_distprog
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , binary
+    , bytestring
+    , containers
+    , data-accessor
+    , deepseq
+    , distprog
+    , distributed-static
+    , exceptions
+    , hashable
+    , mtl
+    , network-transport
+    , network-transport-tcp
+    , random
+    , rank1dynamic
+    , stm
+    , syb
+    , template-haskell >=2.11.0.0 && <=2.11.0.0
+    , time
+  default-language: Haskell2010
+
+test-suite distprog-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_distprog
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , binary
+    , bytestring
+    , containers
+    , data-accessor
+    , deepseq
+    , distprog
+    , distributed-static
+    , exceptions
+    , hashable
+    , mtl
+    , network-transport
+    , network-transport-tcp
+    , random
+    , rank1dynamic
+    , stm
+    , syb
+    , template-haskell >=2.11.0.0 && <=2.11.0.0
+    , time
+  default-language: Haskell2010
