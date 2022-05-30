@@ -84,6 +84,17 @@ executables:
     dependencies:
     - distprog
 
+  masterslave-exe:
+    main:                Main.hs
+    source-dirs:         app/masterslave
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - distprog
+
+
 tests:
   distprog-test:
     main:                Spec.hs
