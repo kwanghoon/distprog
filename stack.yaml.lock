@@ -43,6 +43,13 @@ packages:
   original:
     git: https://github.com/haskell-distributed/network-transport-tcp.git
     commit: d87d6f55697a94a1fbf211ff9c1bb769a1e129cd
+- completed:
+    hackage: network-multicast-0.2.0@sha256:7cc2bd715f98ab0d891e8893b60a9a0048b5ae5b804acea96849f4ecf7260ac2,1009
+    pantry-tree:
+      size: 346
+      sha256: 79cfc56a8ad0e08c357d44b7095705b944ea2f62c37114ba90f330ceaed1bd63
+  original:
+    hackage: network-multicast-0.2.0@sha256:7cc2bd715f98ab0d891e8893b60a9a0048b5ae5b804acea96849f4ecf7260ac2,1009
 snapshots:
 - completed:
     size: 618506

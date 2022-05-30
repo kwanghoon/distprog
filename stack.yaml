@@ -31,6 +31,8 @@ resolver:
 #   - wai
 packages:
 - .
+- ../distributed-process
+- ../distributed-process-simplelocalnet
 # - distributed-process-tests/
 
 # Dependency packages to be pulled from upstream that are not in the resolver.
@@ -50,6 +52,8 @@ extra-deps:
 - rematch-0.2.0.0@sha256:86019f4d6a4347e1291a0a9f85ba6324e1447e2b93d75958e59c24212e9d8178,1245
 - git: https://github.com/haskell-distributed/network-transport-tcp.git
   commit: d87d6f55697a94a1fbf211ff9c1bb769a1e129cd
+- network-multicast-0.2.0@sha256:7cc2bd715f98ab0d891e8893b60a9a0048b5ae5b804acea96849f4ecf7260ac2,1009
+
 
 # Override default flag values for local packages and extra-deps
 # flags: {}

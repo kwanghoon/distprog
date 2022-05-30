@@ -21,6 +21,9 @@ description:         Please see the README on GitHub at <https://github.com/gith
 
 dependencies:
 - base >= 4.7 && < 5
+- distributed-process
+- distributed-process-simplelocalnet
+- network-transport-tcp
 - template-haskell
 - time
 - exceptions
@@ -30,9 +33,7 @@ dependencies:
 - stm
 - binary
 - deepseq
-- distributed-static
 - network-transport
-- network-transport-tcp
 - mtl
 - hashable
 - rank1dynamic
@@ -66,6 +67,16 @@ executables:
   remoteproc-exe:
     main:                Main.hs
     source-dirs:         app/spawnremoteprocess
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - distprog
+
+  simplelocalnet-exe:
+    main:                Main.hs
+    source-dirs:         app/simplelocalnet
     ghc-options:
     - -threaded
     - -rtsopts
